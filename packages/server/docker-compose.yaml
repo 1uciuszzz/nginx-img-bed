@@ -1,0 +1,14 @@
+services:
+  nginx-img-bed:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: nginx-img-bed:241121
+    restart: always
+    environment:
+      BED_PATH: ''
+      EXTERNAL_LINK: ''
+    volumes:
+      - path/to/nginx/save/image:/app/images
+    ports:
+      - '8121:3000'
